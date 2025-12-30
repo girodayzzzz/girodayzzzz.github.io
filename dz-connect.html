@@ -21,50 +21,107 @@
     <section class="hero">
         <h2>DZ Connect</h2>
         <p>
-            A curated connection wall where businesses and DZ Media members
-            discover opportunities and collaborations.
+            DZ Connect is a curated business wall where companies
+            gain visibility among active digital professionals,
+            freelancers, and creators inside the DZ Media network.
         </p>
+    </section>
+    
+    <!-- SEARCH -->
+    <section class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by company, industry, or role..."
+            onkeyup="filterListings()"
+        >
     </section>
 
     <!-- LISTINGS -->
     <section class="values">
-
         <div class="value-box">
-            <h3>🏢 Example Company</h3>
+            <h3>🎯 Targeted Visibility</h3>
+            <p>
+                Your business is shown directly to people
+                interested in digital work, services, and collaborations.
+            </p>
+        </div>
+    
+        <div class="value-box">
+            <h3>🤝 Direct Connections</h3>
+            <p>
+                Members can contact you directly.
+                No platforms, no middle steps.
+            </p>
+        </div>
+    
+        <div class="value-box">
+            <h3>💸 Simple Monthly Listing</h3>
+            <p>
+                No contracts, no commissions.
+                Just a simple monthly visibility fee.
+            </p>
+        </div>
+    </section>
+    
+    <section class="values" id="businessList">
+
+        <!-- PREMIUM LISTING -->
+        <div class="value-box premium">
+            <h3>⭐ Example Premium Company</h3>
             <p><strong>Industry:</strong> Marketing & Advertising</p>
             <p><strong>Looking for:</strong> Content creators, video editors</p>
-            <p><strong>Contact:</strong> example@email.com</p>
+            <p><strong>Contact:</strong> premium@email.com</p>
+            <span class="badge">Premium</span>
         </div>
 
+        <!-- STANDARD LISTING -->
         <div class="value-box">
-            <h3>🏢 Sample Business</h3>
+            <h3>Example Standard Business</h3>
             <p><strong>Industry:</strong> E-commerce</p>
             <p><strong>Looking for:</strong> Web developer, ads specialist</p>
             <p><strong>Contact:</strong> hello@business.com</p>
         </div>
 
-        <!-- ADD MORE LISTINGS MANUALLY -->
+        <!-- ADD MORE LISTINGS HERE -->
 
     </section>
 
     <!-- CTA -->
     <section class="register">
-        <h3>Get Listed on DZ Connect</h3>
+        <h3>List Your Business on DZ Connect</h3>
         <p>
-            Promote your business to DZ Media members.
-            Simple monthly listing. No long-term commitment.
+            Promote your business to the DZ Media network
+            and get discovered by people ready to work.
         </p>
-
-        <a class="main-cta" href="https://forms.gle/YOUR_DZ_CONNECT_FORM" target="_blank">
+    
+        <a class="main-cta" href="https://forms.gle/vJBFjTwCCWDsjBN79" target="_blank">
             Apply for Listing
         </a>
-
+    
         <p class="small-note">
-            €20 / month · Cancel anytime
+            <strong>Standard:</strong> €20/month ·
+            <strong>Premium:</strong> €40/month (highlighted & featured)
         </p>
     </section>
-
+    <section class="values">
+        <div class="value-box premium">
+            <h3>⭐ Premium Listing</h3>
+            <p>
+                Premium businesses receive highlighted placement,
+                increased visibility, and priority positioning
+                inside DZ Connect.
+            </p>
+            <p>
+                Best for companies actively looking for collaborators,
+                freelancers, or digital partners.
+            </p>
+        </div>
+    </section>
+    
+    
 </main>
 
+<script src="dz-connect.js"></script>
 </body>
 </html>
