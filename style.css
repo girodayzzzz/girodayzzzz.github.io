@@ -1,0 +1,110 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+}
+
+/* INTRO OVERLAY */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #1a1a1a, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: introExit 1.2s ease forwards;
+    animation-delay: 3.2s;
+}
+
+/* INTRO CONTENT */
+.intro-content {
+    text-align: center;
+    animation: introReveal 2.2s ease forwards;
+}
+
+.intro-content h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.intro-content p {
+    font-size: 0.9rem;
+    opacity: 0.65;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* MAIN CONTENT */
+#main {
+    display: none;
+    padding: 80px 40px;
+    text-align: center;
+    animation: mainFade 1.2s ease forwards;
+}
+
+/* ANIMATIONS */
+@keyframes introReveal {
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes introExit {
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes mainFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CONNECT LINKS */
+.links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 14px 26px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background: white;
+    color: black;
+}
