@@ -53,40 +53,168 @@ body {
     animation: mainFade 1.2s ease forwards;
 }
 
+/* NAVIGATION */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
 /* HERO SECTION */
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin-bottom: 15px;
 }
 
 .hero p {
     opacity: 0.7;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* LINKS / BUTTONS */
-.links {
+/* CTA GROUP */
+.cta-group {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.links a {
-    text-decoration: none;
-    color: white;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 14px 28px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.links a:hover {
+/* PRIMARY CTA */
+.main-cta {
     background: white;
     color: black;
+    padding: 18px 42px;
+    border-radius: 60px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.25);
+}
+
+/* SECONDARY CTA */
+.secondary-cta {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 16px 36px;
+    border-radius: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.secondary-cta:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* VALUES / HOW IT WORKS */
+.values {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.value-box {
+    padding: 35px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.value-box:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.03);
+}
+
+.value-box h3 {
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.value-box p {
+    opacity: 0.7;
+    font-size: 0.95rem;
+}
+
+/* REGISTER SECTION */
+.register {
+    margin-top: 130px;
+    text-align: center;
+}
+
+.register h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.register p {
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.register-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.register-form input {
+    padding: 16px 20px;
+    border-radius: 40px;
+    border: none;
+    min-width: 260px;
+    font-size: 0.9rem;
+}
+
+.register-form button {
+    padding: 16px 30px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.small-note {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* COMMUNITY SECTION */
+.community {
+    margin-top: 130px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
 }
 
 /* ANIMATIONS */
@@ -115,32 +243,14 @@ body {
 /* MOBILE */
 @media (max-width: 600px) {
     .intro-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
     }
 
     .hero h2 {
         font-size: 2rem;
     }
-}
 
-/* NAVIGATION */
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 60px;
+    #main {
+        padding: 60px 20px;
+    }
 }
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.nav a:hover {
-    opacity: 1;
-}
-
