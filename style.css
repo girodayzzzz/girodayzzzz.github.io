@@ -1,11 +1,15 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BASE */
+/* =========================
+   BASE
+========================= */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #0d0d0d;
@@ -13,38 +17,41 @@ body {
     overflow-x: hidden;
 }
 
-/* INTRO OVERLAY */
+/* =========================
+   INTRO OVERLAY
+========================= */
 #intro {
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at center, #1a1a1a, #000);
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 9999;
 }
 
-/* INTRO CONTENT */
 .intro-content {
     text-align: center;
-    animation: introReveal 2.5s ease forwards;
+    animation: introReveal 1.2s ease forwards;
 }
 
 .intro-content h1 {
-    font-size: 3.5rem;
-    letter-spacing: 3px;
+    font-size: 3.2rem;
+    letter-spacing: 4px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.intro-content p {
-    font-size: 0.9rem;
-    opacity: 0.6;
-    letter-spacing: 4px;
+.intro-sub {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    opacity: 0.5;
     text-transform: uppercase;
 }
 
-/* MAIN CONTENT */
+/* =========================
+   MAIN CONTENT
+========================= */
 #main {
     display: none;
     min-height: 100vh;
@@ -53,7 +60,9 @@ body {
     animation: mainFade 1.2s ease forwards;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 .nav {
     display: flex;
     justify-content: center;
@@ -66,7 +75,7 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     letter-spacing: 2px;
-    opacity: 0.7;
+    opacity: 0.65;
     transition: opacity 0.3s ease;
 }
 
@@ -74,22 +83,32 @@ body {
     opacity: 1;
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 .hero h2 {
-    font-size: 2.7rem;
-    margin-bottom: 15px;
+    font-size: 2.8rem;
+    margin-bottom: 16px;
 }
 
 .hero p {
     opacity: 0.7;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     font-size: 1.1rem;
-    max-width: 700px;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* CTA GROUP */
+.hero-sub {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+/* =========================
+   CTA GROUP
+========================= */
 .cta-group {
     display: flex;
     justify-content: center;
@@ -101,7 +120,7 @@ body {
 .main-cta {
     background: white;
     color: black;
-    padding: 18px 42px;
+    padding: 18px 44px;
     border-radius: 60px;
     font-size: 1rem;
     letter-spacing: 2px;
@@ -117,7 +136,7 @@ body {
 
 /* SECONDARY CTA */
 .secondary-cta {
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.25);
     padding: 16px 36px;
     border-radius: 60px;
     text-decoration: none;
@@ -131,7 +150,9 @@ body {
     background: rgba(255,255,255,0.08);
 }
 
-/* VALUES / HOW IT WORKS */
+/* =========================
+   VALUES / SECTIONS
+========================= */
 .values {
     margin-top: 100px;
     display: grid;
@@ -140,9 +161,9 @@ body {
 }
 
 .value-box {
-    padding: 35px;
+    padding: 36px;
     border-radius: 22px;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.14);
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -159,57 +180,49 @@ body {
 .value-box p {
     opacity: 0.7;
     font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* REGISTER SECTION */
-.register {
-    margin-top: 130px;
-    text-align: center;
+/* LISTS INSIDE BOXES */
+.value-box ul {
+    margin-top: 15px;
+    padding-left: 20px;
 }
 
-.register h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.register p {
+.value-box li {
+    font-size: 0.85rem;
     opacity: 0.7;
-    margin-bottom: 25px;
+    margin-bottom: 6px;
 }
 
-.register-form {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+/* =========================
+   PREMIUM LISTINGS
+========================= */
+.premium {
+    border: 2px solid gold;
+    background: rgba(255, 215, 0, 0.05);
+    position: relative;
 }
 
-.register-form input {
-    padding: 16px 20px;
-    border-radius: 40px;
-    border: none;
-    min-width: 260px;
-    font-size: 0.9rem;
+.premium h3 {
+    color: gold;
 }
 
-.register-form button {
-    padding: 16px 30px;
-    border-radius: 40px;
-    border: none;
-    cursor: pointer;
-    background: white;
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: gold;
     color: black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
     font-weight: 600;
-    font-size: 0.9rem;
 }
 
-.small-note {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    opacity: 0.5;
-}
-
-/* COMMUNITY SECTION */
+/* =========================
+   COMMUNITY SECTION
+========================= */
 .community {
     margin-top: 130px;
     padding-top: 60px;
@@ -217,15 +230,89 @@ body {
     text-align: center;
 }
 
-/* ANIMATIONS */
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 120px;
+    padding: 60px 30px 25px;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    font-size: 0.85rem;
+    opacity: 0.65;
+    line-height: 1.6;
+}
+
+.footer-sub {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.4;
+}
+
+.footer-title {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 15px;
+}
+
+.footer-links a,
+.footer-contact a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.75rem;
+    opacity: 0.4;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
 @keyframes introReveal {
-    from {
+    0% {
         opacity: 0;
-        transform: scale(1.15);
+        transform: scale(0.96);
     }
-    to {
+    40% {
         opacity: 1;
         transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.02);
     }
 }
 
@@ -240,10 +327,12 @@ body {
     }
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 600px) {
     .intro-content h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .hero h2 {
@@ -253,53 +342,4 @@ body {
     #main {
         padding: 60px 20px;
     }
-}
-/* SEARCH BOX */
-.search-box {
-    margin: 40px auto 60px;
-    text-align: center;
-}
-
-.search-box input {
-    width: 100%;
-    max-width: 500px;
-    padding: 16px 22px;
-    border-radius: 40px;
-    border: none;
-    font-size: 0.95rem;
-}
-
-/* PREMIUM LISTINGS */
-.premium {
-    border: 2px solid gold;
-    position: relative;
-    background: rgba(255, 215, 0, 0.05);
-}
-
-.badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: gold;
-    color: black;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 600;
-}
-.value-box ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-.value-box li {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    margin-bottom: 6px;
-}
-
-.hero-sub {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    opacity: 0.65;
 }
