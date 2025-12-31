@@ -287,3 +287,13 @@ body {
     font-size: 0.7rem;
     font-weight: 600;
 }
+.value-box ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.value-box li {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 6px;
+}
