@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <main id="main" style="display:block">
 
-    <!-- NAVIGATION -->
+    <!-- NAV -->
     <nav class="nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -22,141 +23,130 @@
         <h2>DZ Connect</h2>
         <p>
             DZ Connect is a curated business wall where companies
-            gain visibility among active digital professionals,
+            gain visibility among digital professionals,
             freelancers, and creators inside the DZ Media network.
         </p>
-    </section>
-    
-    <!-- SEARCH -->
-    <section class="search-box">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search by company, industry, or role..."
-            onkeyup="filterListings()"
-        >
+        <p class="hero-sub">
+            Simple visibility · Direct contact · No middlemen
+        </p>
     </section>
 
-    <!-- LISTINGS -->
+    <!-- WHY DZ CONNECT -->
     <section class="values">
         <div class="value-box">
             <h3>🎯 Targeted Visibility</h3>
             <p>
                 Your business is shown directly to people
-                interested in digital work, services, and collaborations.
+                interested in digital work, services, and collaboration.
             </p>
         </div>
-    
+
         <div class="value-box">
             <h3>🤝 Direct Connections</h3>
             <p>
-                Members can contact you directly.
-                No platforms, no middle steps.
+                Members contact you directly.
+                No platforms, no commissions, no delays.
             </p>
         </div>
-    
+
         <div class="value-box">
             <h3>💸 Simple Monthly Listing</h3>
             <p>
-                No contracts, no commissions.
-                Just a simple monthly visibility fee.
+                No contracts or hidden fees.
+                Just a simple monthly visibility plan.
             </p>
         </div>
     </section>
-    
+
+<!-- SEARCH -->
+<section class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by company, industry, or role..."
+        onkeyup="filterListings()"
+    >
+    <p id="noResults" style="display:none; opacity:0.6; text-align:center; margin-top:20px;">
+        No businesses match your search.
+    </p>
+</section>
+
+
+    <!-- BUSINESS LISTINGS -->
     <section class="values" id="businessList">
 
-        <!-- PREMIUM LISTING -->
+        <!-- PREMIUM -->
         <div class="value-box premium">
-            <h3>⭐ Example Premium Company</h3>
-            <p><strong>Industry:</strong> Marketing & Advertising</p>
-            <p><strong>Looking for:</strong> Content creators, video editors</p>
-            <p><strong>Contact:</strong> premium@email.com</p>
+            <h3>⭐ Alpha Growth Studio</h3>
+            <p><strong>Industry:</strong> Digital Marketing</p>
+            <p><strong>Looking for:</strong> Social media managers, short-form video editors</p>
+            <p><strong>Contact:</strong> contact@alphagrowthstudio.com</p>
             <span class="badge">Premium</span>
         </div>
 
-        <!-- STANDARD LISTING -->
+        <!-- STANDARD -->
         <div class="value-box">
-            <h3>Example Standard Business</h3>
+            <h3>Nova Ecom</h3>
             <p><strong>Industry:</strong> E-commerce</p>
-            <p><strong>Looking for:</strong> Web developer, ads specialist</p>
-            <p><strong>Contact:</strong> hello@business.com</p>
+            <p><strong>Looking for:</strong> Product researchers, ad creatives</p>
+            <p><strong>Contact:</strong> hello@novaecom.com</p>
         </div>
 
-        <!-- ADD MORE LISTINGS HERE -->
-        <section class="values" id="businessList">
+        <div class="value-box">
+            <h3>Bright Web Solutions</h3>
+            <p><strong>Industry:</strong> Web Development</p>
+            <p><strong>Looking for:</strong> Front-end developers, designers</p>
+            <p><strong>Contact:</strong> info@brightwebsolutions.io</p>
+        </div>
 
-            <!-- PREMIUM LISTING -->
-            <div class="value-box premium">
-                <h3>⭐ Alpha Growth Studio</h3>
-                <p><strong>Industry:</strong> Digital Marketing</p>
-                <p><strong>Looking for:</strong> Social media managers, short-form video editors</p>
-                <p><strong>Contact:</strong> contact@alphagrowthstudio.com</p>
-                <span class="badge">Premium</span>
-            </div>
-        
-            <!-- STANDARD LISTING -->
-            <div class="value-box">
-                <h3>Nova Ecom</h3>
-                <p><strong>Industry:</strong> E-commerce</p>
-                <p><strong>Looking for:</strong> Product researchers, ad creatives</p>
-                <p><strong>Contact:</strong> hello@novaecom.com</p>
-            </div>
-        
-            <div class="value-box">
-                <h3>Bright Web Solutions</h3>
-                <p><strong>Industry:</strong> Web Development</p>
-                <p><strong>Looking for:</strong> Front-end developers, designers</p>
-                <p><strong>Contact:</strong> info@brightwebsolutions.io</p>
-            </div>
-        
-            <div class="value-box">
-                <h3>Content Forge</h3>
-                <p><strong>Industry:</strong> Content & Media</p>
-                <p><strong>Looking for:</strong> Copywriters, video editors</p>
-                <p><strong>Contact:</strong> work@contentforge.media</p>
-            </div>
-        
-        </section>
-        
+        <div class="value-box">
+            <h3>Content Forge</h3>
+            <p><strong>Industry:</strong> Content & Media</p>
+            <p><strong>Looking for:</strong> Copywriters, video editors</p>
+            <p><strong>Contact:</strong> work@contentforge.media</p>
+        </div>
 
+    </section>
+
+    <!-- PRICING EXPLANATION -->
+    <section class="values">
+        <div class="value-box">
+            <h3>Standard Listing – €20 / month</h3>
+            <p>
+                Your business is listed on DZ Connect
+                and visible to all members.
+            </p>
+        </div>
+
+        <div class="value-box premium">
+            <h3>⭐ Premium Listing – €40 / month</h3>
+            <p>
+                Highlighted placement, priority visibility,
+                and featured positioning on DZ Connect.
+            </p>
+        </div>
     </section>
 
     <!-- CTA -->
     <section class="register">
         <h3>List Your Business on DZ Connect</h3>
         <p>
-            Promote your business to the DZ Media network
-            and get discovered by people ready to work.
+            Apply to list your business and reach people
+            ready to work, collaborate, and deliver.
         </p>
-    
+
         <a class="main-cta" href="https://forms.gle/vJBFjTwCCWDsjBN79" target="_blank">
             Apply for Listing
         </a>
-    
+
         <p class="small-note">
-            <strong>Standard:</strong> €20/month ·
-            <strong>Premium:</strong> €40/month (highlighted & featured)
+            Manual approval · No long-term commitment · Cancel anytime
         </p>
     </section>
-    <section class="values">
-        <div class="value-box premium">
-            <h3>⭐ Premium Listing</h3>
-            <p>
-                Premium businesses receive highlighted placement,
-                increased visibility, and priority positioning
-                inside DZ Connect.
-            </p>
-            <p>
-                Best for companies actively looking for collaborators,
-                freelancers, or digital partners.
-            </p>
-        </div>
-    </section>
-    
-    
+
 </main>
 
 <script src="dz-connect.js"></script>
+
 </body>
 </html>
