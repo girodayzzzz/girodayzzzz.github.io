@@ -1,6 +1,7 @@
 function filterListings() {
     const input = document.getElementById("searchInput");
     const list = document.getElementById("businessList");
+    const noResults = document.getElementById("noResults");
 
     if (!input || !list) return;
 
@@ -20,8 +21,6 @@ function filterListings() {
         }
     }
 
-    // Optional: handle "no results"
-    const noResults = document.getElementById("noResults");
     if (noResults) {
         noResults.style.display = visibleCount === 0 ? "block" : "none";
     }

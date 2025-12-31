@@ -58,24 +58,32 @@
         </div>
     </section>
 
-<!-- SEARCH -->
-<section class="search-box">
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Search by company, industry, or role..."
-        onkeyup="filterListings()"
-    >
-    <p id="noResults" style="display:none; opacity:0.6; text-align:center; margin-top:20px;">
-        No businesses match your search.
-    </p>
-</section>
-
+    <!-- SEARCH -->
+    <section class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by company, industry, or role..."
+            onkeyup="filterListings()"
+        >
+        <p id="noResults" style="display:none; opacity:0.6; text-align:center; margin-top:20px;">
+            No businesses match your search.
+        </p>
+    </section>
 
     <!-- BUSINESS LISTINGS -->
     <section class="values" id="businessList">
 
-        <!-- PREMIUM -->
+        <!-- YOUR BUSINESS (PREMIUM) -->
+        <div class="value-box premium">
+            <h3>⭐ DZ Transport</h3>
+            <p><strong>Industry:</strong> Transport & Logistics</p>
+            <p><strong>Offering:</strong> Transport solutions worldwide</p>
+            <p><strong>Contact:</strong> logistikadzautotrade@gmail.com</p>
+            <span class="badge">Premium</span>
+        </div>
+
+        <!-- EXAMPLE PREMIUM -->
         <div class="value-box premium">
             <h3>⭐ Alpha Growth Studio</h3>
             <p><strong>Industry:</strong> Digital Marketing</p>
@@ -108,13 +116,13 @@
 
     </section>
 
-    <!-- PRICING EXPLANATION -->
+    <!-- PRICING -->
     <section class="values">
         <div class="value-box">
             <h3>Standard Listing – €20 / month</h3>
             <p>
-                Your business is listed on DZ Connect
-                and visible to all members.
+                Your business is listed and visible
+                to all DZ Media members.
             </p>
         </div>
 
@@ -122,7 +130,7 @@
             <h3>⭐ Premium Listing – €40 / month</h3>
             <p>
                 Highlighted placement, priority visibility,
-                and featured positioning on DZ Connect.
+                and featured positioning.
             </p>
         </div>
     </section>
