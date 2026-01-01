@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DZ Media Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0f0f0f;
+    color:#fff;
+}
+
+header {
+    padding:40px 20px;
+    text-align:center;
+    border-bottom:1px solid #222;
+}
+
+header h1 {
+    margin:0 0 10px;
+}
+
+header p {
+    opacity:0.8;
+    font-size:15px;
+}
+
+.shop {
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card {
+    background:#161616;
+    border:1px solid #222;
+    border-radius:12px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+}
+
+.card img {
+    width:100%;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+.card h3 {
+    margin:0 0 5px;
+}
+
+.price {
+    font-weight:bold;
+    margin:5px 0;
+}
+
+.card p {
+    font-size:14px;
+    opacity:0.85;
+    flex-grow:1;
+}
+
+.buy {
+    margin-top:15px;
+    text-align:center;
+    padding:12px;
+    background:#00ff9c;
+    color:#000;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:8px;
+}
+
+footer {
+    text-align:center;
+    padding:30px 20px;
+    font-size:13px;
+    opacity:0.6;
+    border-top:1px solid #222;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DZ Media Shop</h1>
+    <p>Instant checkout · Secure payment · No account required</p>
+</header>
+
+<section class="shop">
+    <div class="grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="card">
+            <img src="images/product1.jpg" alt="Service Package">
+            <h3>Content Starter Package</h3>
+            <div class="price">€49</div>
+            <p>
+                AI-assisted content creation for social media or websites.
+                Delivered fast after purchase.
+            </p>
+            <a class="buy" href="https://buy.stripe.com/YOUR_LINK_HERE">
+                Buy Now
+            </a>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="card">
+            <img src="images/product2.jpg" alt="Service Package">
+            <h3>Business Visibility Listing</h3>
+            <div class="price">€29</div>
+            <p>
+                Get your business featured inside the DZ Media network.
+            </p>
+            <a class="buy" href="https://buy.stripe.com/YOUR_LINK_HERE">
+                Buy Now
+            </a>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="card">
+            <img src="images/product3.jpg" alt="Service Package">
+            <h3>Custom Work Request</h3>
+            <div class="price">From €99</div>
+            <p>
+                Submit a custom task and we’ll handle execution for you.
+            </p>
+            <a class="buy" href="https://buy.stripe.com/YOUR_LINK_HERE">
+                Buy Now
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- AD SLOT -->
+<div class="ad-slot">
+    <!-- PropellerAds code goes here -->
+</div>
+
+
+<footer>
+    © DZ Media · Secure payments handled by Stripe
+</footer>
+
+</body>
+</html>

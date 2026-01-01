@@ -2,59 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DZ Connect – DZ Media</title>
+    <title>DZ Connect – Business Listings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="DZ Connect is a curated business directory where companies gain visibility inside the DZ Media network.">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<main id="main" style="display:block">
+<main id="main">
 
     <!-- NAV -->
     <nav class="nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="dz-connect.html">DZ Connect</a>
+        <a href="shop.html">Shop</a>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
         <h2>DZ Connect</h2>
         <p>
-            DZ Connect is a curated business wall where companies
-            gain visibility among digital professionals, freelancers,
-            and creators inside the DZ Media network.
+            A curated business directory where companies gain visibility
+            among professionals, freelancers, and partners inside the DZ Media network.
         </p>
         <p class="hero-sub">
-            Simple visibility · Direct contact · No middlemen
+            Visibility · Direct contact · No middlemen
         </p>
     </section>
 
-    <!-- WHO IT IS FOR -->
-    <section class="values">
-        <div class="value-box">
-            <h3>🏢 For Businesses</h3>
-            <p>
-                List your business and get discovered by people
-                actively looking for work, projects, and collaboration.
-            </p>
-        </div>
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <h3>How DZ Connect Works</h3>
 
-        <div class="value-box">
-            <h3>🧑‍💻 For Professionals</h3>
-            <p>
-                Discover companies hiring, collaborating,
-                or outsourcing digital and operational work.
-            </p>
-        </div>
+        <div class="how-grid">
+            <div class="how-step">
+                <span class="how-number">1</span>
+                <h4>Apply for Listing</h4>
+                <p>
+                    Businesses apply to be listed and reviewed
+                    to keep the directory relevant and spam-free.
+                </p>
+            </div>
 
-        <div class="value-box">
-            <h3>🔒 Quality Focused</h3>
-            <p>
-                All listings are manually reviewed to keep
-                DZ Connect relevant and spam-free.
-            </p>
+            <div class="how-step">
+                <span class="how-number">2</span>
+                <h4>Get Visibility</h4>
+                <p>
+                    Your business becomes visible to visitors,
+                    members, and partners browsing DZ Media.
+                </p>
+            </div>
+
+            <div class="how-step">
+                <span class="how-number">3</span>
+                <h4>Direct Contact</h4>
+                <p>
+                    Interested professionals contact you directly.
+                    No commissions or intermediaries.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -63,7 +75,7 @@
         <input
             type="text"
             id="searchInput"
-            placeholder="Search by company, industry, or role..."
+            placeholder="Search businesses, industries, or services…"
             onkeyup="filterListings()"
         >
         <p id="noResults" style="display:none; opacity:0.6; text-align:center; margin-top:20px;">
@@ -74,62 +86,60 @@
     <!-- BUSINESS LISTINGS -->
     <section class="values" id="businessList">
 
-        <!-- DZ TRANSPORT (PREMIUM) -->
+        <!-- PREMIUM -->
         <div class="value-box premium">
-            <h3>⭐ DZ Transport</h3>
+            <span class="badge">Featured</span>
+            <h3>DZ Transport</h3>
             <p><strong>Industry:</strong> Transport & Logistics</p>
-            <p><strong>Offering:</strong> Transport solutions worldwide</p>
+            <p><strong>Services:</strong> International transport solutions</p>
             <p><strong>Contact:</strong> logistikadzautotrade@gmail.com</p>
-            <span class="badge">Premium</span>
         </div>
 
-        <!-- DZ MEDIA (STANDARD) -->
+        <!-- STANDARD -->
         <div class="value-box">
             <h3>DZ Media</h3>
-            <p><strong>Industry:</strong> Digital Services & Media</p>
-            <p><strong>Offering:</strong> Web development, design, video editing, digital services</p>
+            <p><strong>Industry:</strong> Digital Services</p>
+            <p><strong>Services:</strong> Content, automation, online solutions</p>
             <p><strong>Contact:</strong> info.dayzzzz@gmail.com</p>
         </div>
 
-        <!-- EXAMPLE BUSINESSES -->
+        <!-- EXAMPLES -->
         <div class="value-box">
             <h3>Nova Ecom</h3>
             <p><strong>Industry:</strong> E-commerce</p>
-            <p><strong>Looking for:</strong> Product researchers, ad creatives</p>
+            <p><strong>Looking for:</strong> Product research, ads</p>
             <p><strong>Contact:</strong> hello@novaecom.com</p>
         </div>
 
         <div class="value-box">
             <h3>Bright Web Solutions</h3>
             <p><strong>Industry:</strong> Web Development</p>
-            <p><strong>Looking for:</strong> Front-end developers, designers</p>
+            <p><strong>Looking for:</strong> Front-end developers</p>
             <p><strong>Contact:</strong> info@brightwebsolutions.io</p>
         </div>
 
-        <div class="value-box">
-            <h3>Content Forge</h3>
-            <p><strong>Industry:</strong> Content & Media</p>
-            <p><strong>Looking for:</strong> Copywriters, video editors</p>
-            <p><strong>Contact:</strong> work@contentforge.media</p>
-        </div>
-
     </section>
+
+    <!-- AD SLOT (SAFE, PROFESSIONAL) -->
+    <div class="ad-slot">
+        <!-- Google / Ezoic / Affiliate ads -->
+    </div>
 
     <!-- PRICING -->
     <section class="values">
         <div class="value-box">
             <h3>Standard Listing – €20 / month</h3>
             <p>
-                Listed on DZ Connect and visible
-                to all DZ Media members.
+                Business listing visible to all visitors
+                browsing DZ Connect.
             </p>
         </div>
 
         <div class="value-box premium">
-            <h3>⭐ Premium Listing – €40 / month</h3>
+            <h3>⭐ Featured Listing – €40 / month</h3>
             <p>
-                Highlighted placement, priority visibility,
-                and featured positioning on the page.
+                Highlighted placement, featured badge,
+                and priority visibility on the page.
             </p>
         </div>
     </section>
@@ -138,8 +148,8 @@
     <section class="register">
         <h3>List Your Business on DZ Connect</h3>
         <p>
-            Apply to list your business and connect with
-            people ready to work and collaborate.
+            Get visibility inside the DZ Media network
+            and connect directly with professionals.
         </p>
 
         <a class="main-cta" href="https://forms.gle/vJBFjTwCCWDsjBN79" target="_blank">
@@ -147,13 +157,58 @@
         </a>
 
         <p class="small-note">
-            Manual review · No long-term contracts · Cancel anytime
+            Manual review · Cancel anytime · No commissions
         </p>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <h4>DZ Media</h4>
+                <p>
+                    Digital services, visibility,
+                    and practical online solutions.
+                </p>
+                <p class="footer-sub">
+                    Operated by <strong>Dayzzzz S.P.</strong>
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-title">Platform</p>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="dz-connect.html">DZ Connect</a>
+                <a href="shop.html">Shop</a>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-title">Legal</p>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-title">Contact</p>
+                <a href="mailto:info.dayzzzz@gmail.com">info.dayzzzz@gmail.com</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> DZ Media. All rights reserved.
+        </div>
+    </footer>
 
 </main>
 
 <script src="dz-connect.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
