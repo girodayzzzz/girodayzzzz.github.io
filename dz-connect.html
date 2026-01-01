@@ -11,11 +11,11 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- FIX: force main content visible on non-home pages -->
+    <!-- FORCE VISIBILITY (NON-HOME PAGE FIX) -->
     <style>
         #main { display: block; }
 
-        /* DZ CONNECT EXTRAS */
+        /* FILTER BUTTONS */
         .listing-filters {
             margin-top: 60px;
             text-align: center;
@@ -38,6 +38,26 @@
             background: rgba(255,255,255,0.08);
         }
 
+        /* PRICING FIX */
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pricing-card .price {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 15px 0 20px;
+        }
+
+        .pricing-cta {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* FAQ */
         .faq {
             margin-top: 140px;
             max-width: 900px;
@@ -108,7 +128,7 @@
             <div class="how-step">
                 <span class="how-number">1</span>
                 <h4>Choose a Listing</h4>
-                <p>Select Standard or Featured listing and pay securely via Stripe.</p>
+                <p>Choose Standard or Featured and pay securely via Stripe.</p>
             </div>
 
             <div class="how-step">
@@ -138,7 +158,7 @@
         </p>
     </section>
 
-    <!-- FILTER BUTTONS -->
+    <!-- FILTER -->
     <div class="listing-filters">
         <button class="active" onclick="filterType('all')">All</button>
         <button onclick="filterType('featured')">Featured</button>
@@ -170,31 +190,39 @@
     <!-- PRICING -->
     <section class="values pricing" id="pricing">
 
-        <div class="value-box">
+        <div class="value-box pricing-card">
             <h3>Standard Listing</h3>
-            <p><strong>€20 / month</strong></p>
+            <p class="price">€20 / month</p>
+
             <ul>
                 <li>Business name & description</li>
                 <li>Industry & services</li>
                 <li>Direct contact</li>
             </ul>
-            <a class="main-cta" href="https://buy.stripe.com/bJe00kgEH34UeiF17F57W04">
-                Buy Standard Listing
-            </a>
+
+            <div class="pricing-cta">
+                <a class="main-cta" href="https://buy.stripe.com/bJe00kgEH34UeiF17F57W04">
+                    Buy Standard Listing
+                </a>
+            </div>
         </div>
 
-        <div class="value-box premium">
+        <div class="value-box premium pricing-card">
             <span class="badge">Featured</span>
             <h3>Featured Listing</h3>
-            <p><strong>€40 / month</strong></p>
+            <p class="price">€40 / month</p>
+
             <ul>
                 <li>Everything in Standard</li>
                 <li>Featured placement</li>
                 <li>Higher visibility</li>
             </ul>
-            <a class="main-cta" href="https://buy.stripe.com/bJe00k88b48Yb6teYv57W05">
-                Buy Featured Listing
-            </a>
+
+            <div class="pricing-cta">
+                <a class="main-cta" href="https://buy.stripe.com/bJe00k88b48Yb6teYv57W05">
+                    Buy Featured Listing
+                </a>
+            </div>
         </div>
 
     </section>
@@ -210,11 +238,11 @@
 
         <div class="faq-item">
             <h4>Can I cancel anytime?</h4>
-            <p>Yes. You can cancel your subscription directly in Stripe.</p>
+            <p>Yes. You can cancel directly in Stripe.</p>
         </div>
 
         <div class="faq-item">
-            <h4>Can I upgrade from Standard to Featured?</h4>
+            <h4>Can I upgrade later?</h4>
             <p>Yes. Simply purchase the Featured listing.</p>
         </div>
     </section>
@@ -223,9 +251,7 @@
     <section id="paymentSuccess" class="register" style="display:none;">
         <h3>Payment Successful</h3>
         <p id="successText"></p>
-        <p class="small-note">
-            You will receive a confirmation email from Stripe.
-        </p>
+        <p class="small-note">You will receive a confirmation email from Stripe.</p>
     </section>
 
     <!-- FOOTER -->
@@ -270,18 +296,16 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     function filterType(type) {
+        const items = document.querySelectorAll("#businessList .value-box");
         const buttons = document.querySelectorAll(".listing-filters button");
         buttons.forEach(b => b.classList.remove("active"));
-
         event.target.classList.add("active");
 
-        const items = document.querySelectorAll("#businessList .value-box");
         items.forEach(item => {
-            if (type === "featured") {
-                item.style.display = item.classList.contains("premium") ? "" : "none";
-            } else {
-                item.style.display = "";
-            }
+            item.style.display =
+                type === "featured" && !item.classList.contains("premium")
+                ? "none"
+                : "";
         });
     }
 
@@ -299,12 +323,10 @@
         const box = document.getElementById("paymentSuccess");
         const text = document.getElementById("successText");
 
-        if (success === "standard") {
-            text.textContent = "You have successfully purchased a Standard Listing.";
-        }
-        if (success === "featured") {
-            text.textContent = "You have successfully purchased a Featured Listing.";
-        }
+        text.textContent =
+            success === "featured"
+            ? "You have successfully purchased a Featured Listing."
+            : "You have successfully purchased a Standard Listing.";
 
         box.style.display = "block";
         box.scrollIntoView({ behavior: "smooth" });
