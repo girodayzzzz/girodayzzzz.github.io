@@ -43,28 +43,25 @@
         <div class="how-grid">
             <div class="how-step">
                 <span class="how-number">1</span>
-                <h4>Apply for Listing</h4>
+                <h4>Choose a Listing</h4>
                 <p>
-                    Businesses apply to be listed and reviewed
-                    to keep the directory relevant and spam-free.
+                    Select Standard or Featured listing and complete payment securely via Stripe.
                 </p>
             </div>
 
             <div class="how-step">
                 <span class="how-number">2</span>
-                <h4>Get Visibility</h4>
+                <h4>We Review & Publish</h4>
                 <p>
-                    Your business becomes visible to visitors,
-                    members, and partners browsing DZ Media.
+                    After payment, your business is reviewed and added to DZ Connect.
                 </p>
             </div>
 
             <div class="how-step">
                 <span class="how-number">3</span>
-                <h4>Direct Contact</h4>
+                <h4>Get Contacted</h4>
                 <p>
-                    Interested professionals contact you directly.
-                    No commissions or intermediaries.
+                    Interested professionals contact you directly. No commissions involved.
                 </p>
             </div>
         </div>
@@ -86,7 +83,7 @@
     <!-- BUSINESS LISTINGS -->
     <section class="values" id="businessList">
 
-        <!-- PREMIUM -->
+        <!-- FEATURED -->
         <div class="value-box premium">
             <span class="badge">Featured</span>
             <h3>DZ Transport</h3>
@@ -103,61 +100,67 @@
             <p><strong>Contact:</strong> info.dayzzzz@gmail.com</p>
         </div>
 
-        <!-- EXAMPLES -->
-        <div class="value-box">
-            <h3>Nova Ecom</h3>
-            <p><strong>Industry:</strong> E-commerce</p>
-            <p><strong>Looking for:</strong> Product research, ads</p>
-            <p><strong>Contact:</strong> hello@novaecom.com</p>
-        </div>
-
-        <div class="value-box">
-            <h3>Bright Web Solutions</h3>
-            <p><strong>Industry:</strong> Web Development</p>
-            <p><strong>Looking for:</strong> Front-end developers</p>
-            <p><strong>Contact:</strong> info@brightwebsolutions.io</p>
-        </div>
-
     </section>
 
-    <!-- AD SLOT (SAFE, PROFESSIONAL) -->
+    <!-- AD SLOT -->
     <div class="ad-slot">
-        <!-- Google / Ezoic / Affiliate ads -->
+        <!-- Ads / Affiliate placements -->
     </div>
 
-    <!-- PRICING -->
+    <!-- PRICING & BUY -->
     <section class="values">
+
+        <!-- STANDARD -->
         <div class="value-box">
-            <h3>Standard Listing – €20 / month</h3>
+            <h3>Standard Listing</h3>
+            <p><strong>€20 / month</strong></p>
             <p>
-                Business listing visible to all visitors
-                browsing DZ Connect.
+                Business listing visible to all visitors browsing DZ Connect.
             </p>
+
+            <ul>
+                <li>Business name & description</li>
+                <li>Industry & services</li>
+                <li>Direct contact details</li>
+            </ul>
+
+            <a class="main-cta"
+               href="https://buy.stripe.com/bJe00kgEH34UeiF17F57W04">
+                Buy Standard Listing
+            </a>
         </div>
 
+        <!-- FEATURED -->
         <div class="value-box premium">
-            <h3>⭐ Featured Listing – €40 / month</h3>
+            <span class="badge">Featured</span>
+            <h3>Featured Listing</h3>
+            <p><strong>€40 / month</strong></p>
             <p>
-                Highlighted placement, featured badge,
-                and priority visibility on the page.
+                Highlighted listing with priority placement.
             </p>
+
+            <ul>
+                <li>Everything in Standard</li>
+                <li>Featured badge</li>
+                <li>Top placement on page</li>
+            </ul>
+
+            <a class="main-cta"
+               href="https://buy.stripe.com/bJe00k88b48Yb6teYv57W05">
+                Buy Featured Listing
+            </a>
         </div>
+
     </section>
 
-    <!-- CTA -->
-    <section class="register">
-        <h3>List Your Business on DZ Connect</h3>
-        <p>
-            Get visibility inside the DZ Media network
-            and connect directly with professionals.
-        </p>
-
-        <a class="main-cta" href="https://forms.gle/vJBFjTwCCWDsjBN79" target="_blank">
-            Apply for Listing
-        </a>
+    <!-- PAYMENT SUCCESS -->
+    <section id="paymentSuccess" class="register" style="display:none;">
+        <h3>Payment Successful</h3>
+        <p id="successText"></p>
 
         <p class="small-note">
-            Manual review · Cancel anytime · No commissions
+            You will receive a confirmation email from Stripe.
+            Your listing will be reviewed and published shortly.
         </p>
     </section>
 
@@ -208,6 +211,27 @@
 <script src="dz-connect.js"></script>
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const params = new URLSearchParams(window.location.search);
+    const success = params.get("success");
+
+    if (success) {
+        const box = document.getElementById("paymentSuccess");
+        const text = document.getElementById("successText");
+
+        if (success === "standard") {
+            text.textContent = "You have successfully purchased a Standard Listing on DZ Connect.";
+        }
+
+        if (success === "featured") {
+            text.textContent = "You have successfully purchased a Featured Listing with priority placement.";
+        }
+
+        if (box) {
+            box.style.display = "block";
+            box.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 </script>
 
 </body>
