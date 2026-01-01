@@ -10,6 +10,11 @@
     <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- FIX: force main content visible on non-home pages -->
+    <style>
+        #main { display: block; }
+    </style>
 </head>
 
 <body>
@@ -44,25 +49,19 @@
             <div class="how-step">
                 <span class="how-number">1</span>
                 <h4>Choose a Listing</h4>
-                <p>
-                    Select Standard or Featured listing and complete payment securely via Stripe.
-                </p>
+                <p>Select Standard or Featured listing and complete payment securely via Stripe.</p>
             </div>
 
             <div class="how-step">
                 <span class="how-number">2</span>
                 <h4>We Review & Publish</h4>
-                <p>
-                    After payment, your business is reviewed and added to DZ Connect.
-                </p>
+                <p>Your business is reviewed and added to DZ Connect after payment.</p>
             </div>
 
             <div class="how-step">
                 <span class="how-number">3</span>
                 <h4>Get Contacted</h4>
-                <p>
-                    Interested professionals contact you directly. No commissions involved.
-                </p>
+                <p>Professionals contact you directly. No commissions involved.</p>
             </div>
         </div>
     </section>
@@ -83,7 +82,6 @@
     <!-- BUSINESS LISTINGS -->
     <section class="values" id="businessList">
 
-        <!-- FEATURED -->
         <div class="value-box premium">
             <span class="badge">Featured</span>
             <h3>DZ Transport</h3>
@@ -92,7 +90,6 @@
             <p><strong>Contact:</strong> logistikadzautotrade@gmail.com</p>
         </div>
 
-        <!-- STANDARD -->
         <div class="value-box">
             <h3>DZ Media</h3>
             <p><strong>Industry:</strong> Digital Services</p>
@@ -107,16 +104,13 @@
         <!-- Ads / Affiliate placements -->
     </div>
 
-    <!-- PRICING & BUY -->
-    <section class="values">
+    <!-- PRICING -->
+    <section class="values pricing">
 
-        <!-- STANDARD -->
         <div class="value-box">
             <h3>Standard Listing</h3>
             <p><strong>€20 / month</strong></p>
-            <p>
-                Business listing visible to all visitors browsing DZ Connect.
-            </p>
+            <p>Business listing visible to all visitors browsing DZ Connect.</p>
 
             <ul>
                 <li>Business name & description</li>
@@ -124,29 +118,24 @@
                 <li>Direct contact details</li>
             </ul>
 
-            <a class="main-cta"
-               href="https://buy.stripe.com/bJe00kgEH34UeiF17F57W04">
+            <a class="main-cta" href="https://buy.stripe.com/bJe00kgEH34UeiF17F57W04">
                 Buy Standard Listing
             </a>
         </div>
 
-        <!-- FEATURED -->
         <div class="value-box premium">
             <span class="badge">Featured</span>
             <h3>Featured Listing</h3>
             <p><strong>€40 / month</strong></p>
-            <p>
-                Highlighted listing with priority placement.
-            </p>
+            <p>Highlighted listing with priority placement.</p>
 
             <ul>
                 <li>Everything in Standard</li>
                 <li>Featured badge</li>
-                <li>Top placement on page</li>
+                <li>Top placement</li>
             </ul>
 
-            <a class="main-cta"
-               href="https://buy.stripe.com/bJe00k88b48Yb6teYv57W05">
+            <a class="main-cta" href="https://buy.stripe.com/bJe00k88b48Yb6teYv57W05">
                 Buy Featured Listing
             </a>
         </div>
@@ -157,7 +146,6 @@
     <section id="paymentSuccess" class="register" style="display:none;">
         <h3>Payment Successful</h3>
         <p id="successText"></p>
-
         <p class="small-note">
             You will receive a confirmation email from Stripe.
             Your listing will be reviewed and published shortly.
@@ -170,13 +158,8 @@
 
             <div class="footer-brand">
                 <h4>DZ Media</h4>
-                <p>
-                    Digital services, visibility,
-                    and practical online solutions.
-                </p>
-                <p class="footer-sub">
-                    Operated by <strong>Dayzzzz S.P.</strong>
-                </p>
+                <p>Digital services, visibility, and practical online solutions.</p>
+                <p class="footer-sub">Operated by <strong>Dayzzzz S.P.</strong></p>
             </div>
 
             <div class="footer-links">
@@ -222,7 +205,6 @@
         if (success === "standard") {
             text.textContent = "You have successfully purchased a Standard Listing on DZ Connect.";
         }
-
         if (success === "featured") {
             text.textContent = "You have successfully purchased a Featured Listing with priority placement.";
         }
