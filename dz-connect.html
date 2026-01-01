@@ -14,6 +14,60 @@
     <!-- FIX: force main content visible on non-home pages -->
     <style>
         #main { display: block; }
+
+        /* DZ CONNECT EXTRAS */
+        .listing-filters {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .listing-filters button {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 10px 22px;
+            border-radius: 30px;
+            margin: 0 6px;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .listing-filters button.active,
+        .listing-filters button:hover {
+            opacity: 1;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .faq {
+            margin-top: 140px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .faq h3 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding: 18px 0;
+        }
+
+        .faq-item h4 {
+            font-size: 0.95rem;
+            cursor: pointer;
+            opacity: 0.85;
+        }
+
+        .faq-item p {
+            font-size: 0.85rem;
+            opacity: 0.65;
+            margin-top: 10px;
+            display: none;
+        }
     </style>
 </head>
 
@@ -39,6 +93,11 @@
         <p class="hero-sub">
             Visibility · Direct contact · No middlemen
         </p>
+
+        <div class="cta-group">
+            <a class="main-cta" href="#pricing">List Your Business</a>
+            <a class="secondary-cta" href="#businessList">View Listings</a>
+        </div>
     </section>
 
     <!-- HOW IT WORKS -->
@@ -49,19 +108,19 @@
             <div class="how-step">
                 <span class="how-number">1</span>
                 <h4>Choose a Listing</h4>
-                <p>Select Standard or Featured listing and complete payment securely via Stripe.</p>
+                <p>Select Standard or Featured listing and pay securely via Stripe.</p>
             </div>
 
             <div class="how-step">
                 <span class="how-number">2</span>
                 <h4>We Review & Publish</h4>
-                <p>Your business is reviewed and added to DZ Connect after payment.</p>
+                <p>Your business is reviewed and added to DZ Connect.</p>
             </div>
 
             <div class="how-step">
                 <span class="how-number">3</span>
                 <h4>Get Contacted</h4>
-                <p>Professionals contact you directly. No commissions involved.</p>
+                <p>Professionals contact you directly. No commissions.</p>
             </div>
         </div>
     </section>
@@ -78,6 +137,12 @@
             No businesses match your search.
         </p>
     </section>
+
+    <!-- FILTER BUTTONS -->
+    <div class="listing-filters">
+        <button class="active" onclick="filterType('all')">All</button>
+        <button onclick="filterType('featured')">Featured</button>
+    </div>
 
     <!-- BUSINESS LISTINGS -->
     <section class="values" id="businessList">
@@ -100,24 +165,19 @@
     </section>
 
     <!-- AD SLOT -->
-    <div class="ad-slot">
-        <!-- Ads / Affiliate placements -->
-    </div>
+    <div class="ad-slot"></div>
 
     <!-- PRICING -->
-    <section class="values pricing">
+    <section class="values pricing" id="pricing">
 
         <div class="value-box">
             <h3>Standard Listing</h3>
             <p><strong>€20 / month</strong></p>
-            <p>Business listing visible to all visitors browsing DZ Connect.</p>
-
             <ul>
                 <li>Business name & description</li>
                 <li>Industry & services</li>
-                <li>Direct contact details</li>
+                <li>Direct contact</li>
             </ul>
-
             <a class="main-cta" href="https://buy.stripe.com/bJe00kgEH34UeiF17F57W04">
                 Buy Standard Listing
             </a>
@@ -127,19 +187,36 @@
             <span class="badge">Featured</span>
             <h3>Featured Listing</h3>
             <p><strong>€40 / month</strong></p>
-            <p>Highlighted listing with priority placement.</p>
-
             <ul>
                 <li>Everything in Standard</li>
-                <li>Featured badge</li>
-                <li>Top placement</li>
+                <li>Featured placement</li>
+                <li>Higher visibility</li>
             </ul>
-
             <a class="main-cta" href="https://buy.stripe.com/bJe00k88b48Yb6teYv57W05">
                 Buy Featured Listing
             </a>
         </div>
 
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h3>Frequently Asked Questions</h3>
+
+        <div class="faq-item">
+            <h4>How fast is my listing published?</h4>
+            <p>Most listings are reviewed and published within 24 hours.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can I cancel anytime?</h4>
+            <p>Yes. You can cancel your subscription directly in Stripe.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can I upgrade from Standard to Featured?</h4>
+            <p>Yes. Simply purchase the Featured listing.</p>
+        </div>
     </section>
 
     <!-- PAYMENT SUCCESS -->
@@ -148,14 +225,12 @@
         <p id="successText"></p>
         <p class="small-note">
             You will receive a confirmation email from Stripe.
-            Your listing will be reviewed and published shortly.
         </p>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-inner">
-
             <div class="footer-brand">
                 <h4>DZ Media</h4>
                 <p>Digital services, visibility, and practical online solutions.</p>
@@ -181,7 +256,6 @@
                 <p class="footer-title">Contact</p>
                 <a href="mailto:info.dayzzzz@gmail.com">info.dayzzzz@gmail.com</a>
             </div>
-
         </div>
 
         <div class="footer-bottom">
@@ -195,6 +269,29 @@
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    function filterType(type) {
+        const buttons = document.querySelectorAll(".listing-filters button");
+        buttons.forEach(b => b.classList.remove("active"));
+
+        event.target.classList.add("active");
+
+        const items = document.querySelectorAll("#businessList .value-box");
+        items.forEach(item => {
+            if (type === "featured") {
+                item.style.display = item.classList.contains("premium") ? "" : "none";
+            } else {
+                item.style.display = "";
+            }
+        });
+    }
+
+    document.querySelectorAll(".faq-item h4").forEach(q => {
+        q.addEventListener("click", () => {
+            const p = q.nextElementSibling;
+            p.style.display = p.style.display === "block" ? "none" : "block";
+        });
+    });
+
     const params = new URLSearchParams(window.location.search);
     const success = params.get("success");
 
@@ -203,16 +300,14 @@
         const text = document.getElementById("successText");
 
         if (success === "standard") {
-            text.textContent = "You have successfully purchased a Standard Listing on DZ Connect.";
+            text.textContent = "You have successfully purchased a Standard Listing.";
         }
         if (success === "featured") {
-            text.textContent = "You have successfully purchased a Featured Listing with priority placement.";
+            text.textContent = "You have successfully purchased a Featured Listing.";
         }
 
-        if (box) {
-            box.style.display = "block";
-            box.scrollIntoView({ behavior: "smooth" });
-        }
+        box.style.display = "block";
+        box.scrollIntoView({ behavior: "smooth" });
     }
 </script>
 
