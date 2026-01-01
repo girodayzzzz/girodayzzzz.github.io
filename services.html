@@ -4,116 +4,271 @@
     <meta charset="UTF-8">
     <title>Services – DZ Media</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="DZ Media provides done-for-you digital services including websites, design, content, and marketing support.">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- FORCE VISIBILITY -->
+    <style>
+        #main { display: block; }
+
+        .service-cta {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .process {
+            margin-top: 140px;
+        }
+
+        .process h3 {
+            margin-bottom: 40px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+        }
+
+        .process-step span {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            opacity: 0.5;
+        }
+
+        .process-step h4 {
+            margin: 10px 0;
+        }
+
+        .trust {
+            margin-top: 140px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.7;
+        }
+    </style>
 </head>
+
 <body>
 
-    <main id="main" style="display:block">
+<main id="main">
 
-        <!-- NAVIGATION -->
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="dz-connect.html">DZ Connect</a>
-        </nav>
-    
-        <!-- HERO -->
-        <section class="hero">
-            <h2>DZ Media Services</h2>
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="dz-connect.html">DZ Connect</a>
+        <a href="shop.html">Shop</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h2>DZ Media Services</h2>
+        <p>
+            Done-for-you digital services for businesses,
+            creators, and brands. We handle the execution —
+            you focus on growth.
+        </p>
+
+        <p class="hero-sub">
+            Practical · Structured · Result-driven
+        </p>
+
+        <div class="cta-group">
+            <a class="main-cta" href="#services">
+                View Services
+            </a>
+            <a class="secondary-cta" href="#contact">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="values" id="services">
+
+        <!-- WEBSITE & DEVELOPMENT -->
+        <div class="value-box">
+            <h3>🌐 Website Development</h3>
             <p>
-                Done-for-you digital services for businesses,
-                creators, and brands. We manage the process —
-                you get results.
+                Professional websites and landing pages designed
+                to convert visitors into customers.
             </p>
-        </section>
-    
-        <!-- SERVICES -->
-        <section class="values">
-    
-            <!-- WEBSITE & DEVELOPMENT -->
-            <div class="value-box">
-                <h3>🌐 Website Development</h3>
-                <p>
-                    Professional websites and landing pages built
-                    to convert visitors into customers.
-                </p>
-                <ul>
-                    <li>Business websites</li>
-                    <li>Landing pages</li>
-                    <li>Portfolio websites</li>
-                    <li>Website redesign</li>
-                    <li>Basic SEO setup</li>
-                </ul>
-            </div>
-    
-            <!-- DESIGN & BRANDING -->
-            <div class="value-box">
-                <h3>🎨 Design & Branding</h3>
-                <p>
-                    Visual identity and design assets that make
-                    your brand stand out.
-                </p>
-                <ul>
-                    <li>Logo design</li>
-                    <li>Brand identity</li>
-                    <li>Social media graphics</li>
-                    <li>Website UI design</li>
-                    <li>Thumbnails & banners</li>
-                </ul>
-            </div>
-    
-            <!-- VIDEO & CONTENT -->
-            <div class="value-box">
-                <h3>🎥 Video Editing & Content</h3>
-                <p>
-                    High-quality video content optimized for
-                    attention, engagement, and growth.
-                </p>
-                <ul>
-                    <li>Short-form videos (Reels, Shorts, TikTok)</li>
-                    <li>YouTube video editing</li>
-                    <li>Captions & hooks</li>
-                    <li>Content repurposing</li>
-                </ul>
-            </div>
-    
-            <!-- MARKETING & GROWTH -->
-            <div class="value-box">
-                <h3>📈 Marketing & Growth</h3>
-                <p>
-                    Practical marketing support to help you
-                    reach more customers.
-                </p>
-                <ul>
-                    <li>Social media management</li>
-                    <li>Lead generation</li>
-                    <li>Outreach & prospecting</li>
-                    <li>Basic growth strategy</li>
-                </ul>
-            </div>
-    
-        </section>
-    
-        <!-- CTA -->
-        <section class="register">
-            <h3>Work With DZ Media</h3>
+            <ul>
+                <li>Business & portfolio websites</li>
+                <li>Landing pages</li>
+                <li>Website redesigns</li>
+                <li>Performance & structure improvements</li>
+                <li>Basic SEO setup</li>
+            </ul>
+        </div>
+
+        <!-- DESIGN & BRANDING -->
+        <div class="value-box">
+            <h3>🎨 Design & Branding</h3>
             <p>
-                Tell us about your project and goals.
-                We’ll review your request and get back to you
-                with a clear proposal.
+                Visual identity and design assets that help your
+                brand look professional and consistent.
             </p>
-    
+            <ul>
+                <li>Logo design</li>
+                <li>Brand identity</li>
+                <li>Social media visuals</li>
+                <li>Website UI design</li>
+                <li>Banners & thumbnails</li>
+            </ul>
+        </div>
+
+        <!-- VIDEO & CONTENT -->
+        <div class="value-box">
+            <h3>🎥 Video Editing & Content</h3>
+            <p>
+                High-quality content optimized for attention,
+                engagement, and growth across platforms.
+            </p>
+            <ul>
+                <li>Short-form videos (Reels, Shorts, TikTok)</li>
+                <li>YouTube video editing</li>
+                <li>Hooks, captions & pacing</li>
+                <li>Content repurposing</li>
+            </ul>
+        </div>
+
+        <!-- MARKETING & SUPPORT -->
+        <div class="value-box">
+            <h3>📈 Marketing & Digital Support</h3>
+            <p>
+                Practical marketing assistance to help you reach
+                more people and generate opportunities.
+            </p>
+            <ul>
+                <li>Social media management</li>
+                <li>Lead generation support</li>
+                <li>Outreach & prospecting</li>
+                <li>Basic growth strategy</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="process">
+        <h3>How We Work</h3>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span>STEP 1</span>
+                <h4>Request & Review</h4>
+                <p>
+                    You submit your request and goals.
+                    We review scope and requirements.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>STEP 2</span>
+                <h4>Proposal & Agreement</h4>
+                <p>
+                    You receive a clear proposal with timeline
+                    and pricing.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>STEP 3</span>
+                <h4>Execution</h4>
+                <p>
+                    Work is delivered using structured workflows
+                    and quality control.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>STEP 4</span>
+                <h4>Delivery</h4>
+                <p>
+                    Final delivery based on agreed scope.
+                    No long-term commitment required.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust">
+        <p>
+            DZ Media works with a flexible network of professionals
+            and tools to deliver reliable results. Each project is
+            reviewed and managed to ensure quality and clarity.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="register" id="contact">
+        <h3>Work With DZ Media</h3>
+        <p>
+            Tell us about your project and goals.
+            We’ll review your request and respond with
+            a clear next step.
+        </p>
+
+        <div class="service-cta">
             <a class="main-cta" href="https://forms.gle/QSxuknz73TRCgKUf9" target="_blank">
                 Request a Quote
             </a>
-    
-            <p class="small-note">
-                No obligation · Response within 24–48 hours
-            </p>
-        </section>
-    
-    </main>
-    
+        </div>
+
+        <p class="small-note">
+            No obligation · Response within 24–48 hours
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <h4>DZ Media</h4>
+                <p>
+                    Digital services, visibility,
+                    and practical online solutions.
+                </p>
+                <p class="footer-sub">
+                    Operated by <strong>Dayzzzz S.P.</strong>
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-title">Platform</p>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="dz-connect.html">DZ Connect</a>
+                <a href="shop.html">Shop</a>
+            </div>
+
+            <div class="footer-contact">
+                <p class="footer-title">Contact</p>
+                <a href="mailto:info.dayzzzz@gmail.com">info.dayzzzz@gmail.com</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> DZ Media. All rights reserved.
+        </div>
+    </footer>
+
+</main>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
