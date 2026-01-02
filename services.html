@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="DZ Media provides done-for-you digital services including websites, design, content, and marketing support.">
+    <meta name="description" content="DZ Media provides done-for-you digital services including websites, design, content, and marketing support for businesses, freelancers, and creators.">
     <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- FORCE VISIBILITY -->
+    <!-- PAGE-SPECIFIC STYLES -->
     <style>
         #main { display: block; }
 
@@ -45,12 +45,38 @@
             margin: 10px 0;
         }
 
+        .audience, .outcomes {
+            max-width: 900px;
+            margin: 140px auto;
+            text-align: center;
+        }
+
+        .audience ul, .outcomes ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .audience li, .outcomes li {
+            opacity: 0.8;
+        }
+
+        .pricing-note {
+            margin-top: 60px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
         .trust {
             margin-top: 140px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.7;
+            text-align: center;
         }
     </style>
 </head>
@@ -72,7 +98,7 @@
         <h2>DZ Media Services</h2>
         <p>
             Done-for-you digital services for businesses,
-            creators, and brands. We handle the execution —
+            freelancers, and creators. We handle the execution —
             you focus on growth.
         </p>
 
@@ -81,25 +107,32 @@
         </p>
 
         <div class="cta-group">
-            <a class="main-cta" href="#services">
-                View Services
-            </a>
-            <a class="secondary-cta" href="#contact">
-                Request a Quote
-            </a>
+            <a class="main-cta" href="#services">View Services</a>
+            <a class="secondary-cta" href="#contact">Request a Quote</a>
         </div>
+    </section>
+
+    <!-- WHO THIS IS FOR -->
+    <section class="audience">
+        <h3>Who This Is For</h3>
+        <p>
+            DZ Media works with individuals and teams that need
+            reliable digital execution without unnecessary complexity.
+        </p>
+        <ul>
+            <li>Small businesses & startups</li>
+            <li>Freelancers & consultants</li>
+            <li>Online creators & personal brands</li>
+            <li>Projects that need clear structure and delivery</li>
+        </ul>
     </section>
 
     <!-- SERVICES -->
     <section class="values" id="services">
 
-        <!-- WEBSITE & DEVELOPMENT -->
         <div class="value-box">
             <h3>🌐 Website Development</h3>
-            <p>
-                Professional websites and landing pages designed
-                to convert visitors into customers.
-            </p>
+            <p>Professional websites and landing pages designed to convert visitors into customers.</p>
             <ul>
                 <li>Business & portfolio websites</li>
                 <li>Landing pages</li>
@@ -109,13 +142,9 @@
             </ul>
         </div>
 
-        <!-- DESIGN & BRANDING -->
         <div class="value-box">
             <h3>🎨 Design & Branding</h3>
-            <p>
-                Visual identity and design assets that help your
-                brand look professional and consistent.
-            </p>
+            <p>Visual identity and design assets that help your brand look professional and consistent.</p>
             <ul>
                 <li>Logo design</li>
                 <li>Brand identity</li>
@@ -125,13 +154,9 @@
             </ul>
         </div>
 
-        <!-- VIDEO & CONTENT -->
         <div class="value-box">
             <h3>🎥 Video Editing & Content</h3>
-            <p>
-                High-quality content optimized for attention,
-                engagement, and growth across platforms.
-            </p>
+            <p>High-quality content optimized for attention and engagement across platforms.</p>
             <ul>
                 <li>Short-form videos (Reels, Shorts, TikTok)</li>
                 <li>YouTube video editing</li>
@@ -140,13 +165,9 @@
             </ul>
         </div>
 
-        <!-- MARKETING & SUPPORT -->
         <div class="value-box">
             <h3>📈 Marketing & Digital Support</h3>
-            <p>
-                Practical marketing assistance to help you reach
-                more people and generate opportunities.
-            </p>
+            <p>Practical marketing assistance to help you reach more people and generate opportunities.</p>
             <ul>
                 <li>Social media management</li>
                 <li>Lead generation support</li>
@@ -157,6 +178,26 @@
 
     </section>
 
+    <!-- OUTCOMES -->
+    <section class="outcomes">
+        <h3>What You Get</h3>
+        <ul>
+            <li>Clear communication & structured workflow</li>
+            <li>Professional digital presence</li>
+            <li>Time saved on execution</li>
+            <li>Focused solutions without long-term lock-in</li>
+        </ul>
+
+        <p class="pricing-note">
+            Most projects are scoped individually based on needs.
+            Typical work starts from smaller one-time tasks and scales as required.
+        </p>
+
+        <div class="service-cta">
+            <a class="main-cta" href="#contact">Request a Quote</a>
+        </div>
+    </section>
+
     <!-- HOW WE WORK -->
     <section class="process">
         <h3>How We Work</h3>
@@ -165,37 +206,25 @@
             <div class="process-step">
                 <span>STEP 1</span>
                 <h4>Request & Review</h4>
-                <p>
-                    You submit your request and goals.
-                    We review scope and requirements.
-                </p>
+                <p>You submit your request and goals. We review scope and requirements.</p>
             </div>
 
             <div class="process-step">
                 <span>STEP 2</span>
                 <h4>Proposal & Agreement</h4>
-                <p>
-                    You receive a clear proposal with timeline
-                    and pricing.
-                </p>
+                <p>You receive a clear proposal with timeline and pricing.</p>
             </div>
 
             <div class="process-step">
                 <span>STEP 3</span>
                 <h4>Execution</h4>
-                <p>
-                    Work is delivered using structured workflows
-                    and quality control.
-                </p>
+                <p>Work is delivered using structured workflows and quality control.</p>
             </div>
 
             <div class="process-step">
                 <span>STEP 4</span>
                 <h4>Delivery</h4>
-                <p>
-                    Final delivery based on agreed scope.
-                    No long-term commitment required.
-                </p>
+                <p>Final delivery based on agreed scope. No long-term commitment required.</p>
             </div>
         </div>
     </section>
@@ -203,9 +232,8 @@
     <!-- TRUST -->
     <section class="trust">
         <p>
-            DZ Media works with a flexible network of professionals
-            and tools to deliver reliable results. Each project is
-            reviewed and managed to ensure quality and clarity.
+            DZ Media operates with a flexible network of professionals and tools.
+            Each project is managed with clarity, structure, and responsibility.
         </p>
     </section>
 
@@ -214,8 +242,7 @@
         <h3>Work With DZ Media</h3>
         <p>
             Tell us about your project and goals.
-            We’ll review your request and respond with
-            a clear next step.
+            We’ll review your request and respond with a clear next step.
         </p>
 
         <div class="service-cta">
@@ -235,10 +262,7 @@
 
             <div class="footer-brand">
                 <h4>DZ Media</h4>
-                <p>
-                    Digital services, visibility,
-                    and practical online solutions.
-                </p>
+                <p>Digital services, visibility, and practical online solutions.</p>
                 <p class="footer-sub">
                     Operated by <strong>Dayzzzz S.P.</strong>
                 </p>
