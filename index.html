@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>DZ Media – Digital Services, Visibility & Partnerships</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="DZ Media is a digital platform providing services, visibility, and collaboration opportunities for businesses, creators, and partners.">
+    <meta name="description"
+          content="DZ Media is a digital platform providing services, visibility, and collaboration opportunities for businesses, creators, and partners.">
     <meta name="robots" content="index, follow">
 
     <!-- CSS -->
@@ -15,8 +18,8 @@
 
 <body>
 
-<!-- INTRO OVERLAY -->
-<div id="intro">
+<!-- INTRO OVERLAY (failsafe: content still visible without JS) -->
+<div id="intro" aria-hidden="true">
     <div class="intro-content">
         <h1>DZ Media</h1>
         <p class="intro-sub">operated by Dayzzzz S.P.</p>
@@ -26,36 +29,45 @@
 <!-- MAIN WEBSITE -->
 <main id="main">
 
-    <!-- NAV -->
-    <nav class="nav">
+    <!-- NAVIGATION -->
+    <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="dz-connect.html">DZ Connect</a>
         <a href="partners.html">Partners</a>
         <a href="shop.html">Shop</a>
-        <a href="https://www.skool.com/business-opportunities-ww-4962" target="_blank">Community</a>
+        <a href="https://www.skool.com/business-opportunities-ww-4962"
+           target="_blank"
+           rel="noopener">
+            Community
+        </a>
     </nav>
 
     <!-- SITE INTRO -->
     <section class="site-intro">
         <p>
-            <strong>DZ Media</strong> helps businesses and projects get digital work done,
-            gain visibility, and collaborate inside a growing online network.
+            <strong>DZ Media</strong> helps businesses and projects
+            get digital work done, gain visibility,
+            and collaborate inside a growing online network.
         </p>
-        <a href="services.html" class="intro-btn">Get Started</a>
+
+        <a href="services.html" class="intro-btn">
+            Get Started
+        </a>
     </section>
 
     <!-- HERO -->
     <section class="hero">
-        <h2>Digital Work. Visibility. Collaboration.</h2>
+        <h1>Digital Work. Visibility. Collaboration.</h1>
 
         <p>
-            DZ Media connects businesses with execution, exposure,
-            and partners — all focused on real, measurable outcomes.
+            DZ Media connects businesses with execution,
+            exposure, and partners — all focused on
+            real, measurable outcomes.
         </p>
 
         <p class="hero-sub">
-            No subscriptions · No noise · Just practical solutions
+            No subscriptions · No noise · Practical solutions only
         </p>
 
         <div class="cta-group">
@@ -70,12 +82,12 @@
 
     <!-- HOW IT WORKS -->
     <section class="how-it-works">
-        <h3>How DZ Media Works</h3>
+        <h2>How DZ Media Works</h2>
 
         <div class="how-grid">
             <div class="how-step">
                 <span class="how-number">1</span>
-                <h4>Request or Discover</h4>
+                <h3>Request or Discover</h3>
                 <p>
                     Businesses request services, explore listings,
                     or discover opportunities inside the platform.
@@ -84,7 +96,7 @@
 
             <div class="how-step">
                 <span class="how-number">2</span>
-                <h4>Execution & Coordination</h4>
+                <h3>Execution & Coordination</h3>
                 <p>
                     DZ Media manages delivery using structured workflows,
                     automation, and trusted collaborators.
@@ -93,10 +105,10 @@
 
             <div class="how-step">
                 <span class="how-number">3</span>
-                <h4>Delivery & Growth</h4>
+                <h3>Delivery & Growth</h3>
                 <p>
-                    Work is delivered based on agreed scope.
-                    No long-term commitments required.
+                    Work is delivered based on agreed scope,
+                    with no long-term commitments.
                 </p>
             </div>
         </div>
@@ -137,6 +149,7 @@
                 A curated business wall where companies gain
                 visibility inside the DZ Media network.
             </p>
+
             <a class="secondary-cta" href="dz-connect.html">
                 View Business Listings
             </a>
@@ -148,13 +161,15 @@
         <div class="value-box">
             <h3>🤝 Partnerships & Collaboration</h3>
             <p>
-                DZ Media actively collaborates with businesses,
-                marketers, creators, and service providers on
-                digital, AI-powered, and media-driven projects.
+                DZ Media collaborates with businesses,
+                marketers, creators, and service providers
+                on digital, AI-powered, and media-driven projects.
             </p>
+
             <p class="small-note">
                 Referral partnerships · Marketing collaboration · Execution partners
             </p>
+
             <a class="secondary-cta" href="partners.html">
                 Explore Partnership Opportunities
             </a>
@@ -163,7 +178,7 @@
 
     <!-- COMMUNITY -->
     <section id="community" class="community">
-        <h3>DZ Media Community</h3>
+        <h2>DZ Media Community</h2>
         <p>
             Join the community to connect with others,
             stay informed, and discover new opportunities.
@@ -171,13 +186,14 @@
 
         <a class="secondary-cta"
            href="https://www.skool.com/business-opportunities-ww-4962"
-           target="_blank">
+           target="_blank"
+           rel="noopener">
             Join Community
         </a>
     </section>
 
     <!-- AD SLOT -->
-    <div class="ad-slot">
+    <div class="ad-slot" aria-hidden="true">
         <!-- Google / Ezoic / Affiliate ads -->
     </div>
 
@@ -186,7 +202,7 @@
         <div class="footer-inner">
 
             <div class="footer-brand">
-                <h4>DZ Media</h4>
+                <h3>DZ Media</h3>
                 <p>
                     A digital platform providing services,
                     visibility, and collaboration opportunities.
@@ -234,7 +250,11 @@
 <!-- JS -->
 <script src="script.js"></script>
 <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Footer year
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 </script>
 
 </body>

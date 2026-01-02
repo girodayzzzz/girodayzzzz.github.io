@@ -1,7 +1,23 @@
 /* =========================
+   CSS VARIABLES
+========================= */
+:root {
+    --bg-main: #0d0d0d;
+    --bg-alt: #0a0a0a;
+    --text-main: #ffffff;
+    --text-muted: rgba(255,255,255,0.7);
+    --border-soft: rgba(255,255,255,0.14);
+    --border-hard: rgba(255,255,255,0.25);
+    --accent: #ffffff;
+    --gold: gold;
+}
+
+/* =========================
    RESET
 ========================= */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,18 +28,19 @@
 ========================= */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #0d0d0d;
-    color: #ffffff;
+    background-color: var(--bg-main);
+    color: var(--text-main);
     overflow-x: hidden;
     line-height: 1.6;
+    text-rendering: optimizeLegibility;
 }
 
 a {
     color: inherit;
 }
 
-a:focus {
-    outline: 2px solid rgba(255,255,255,0.6);
+a:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.7);
     outline-offset: 4px;
 }
 
@@ -38,11 +55,13 @@ a:focus {
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    pointer-events: none;
 }
 
 .intro-content {
     text-align: center;
     animation: introReveal 1.2s ease forwards;
+    will-change: transform, opacity;
 }
 
 .intro-content h1 {
@@ -60,14 +79,18 @@ a:focus {
 }
 
 /* =========================
-   MAIN CONTENT
+   MAIN CONTENT (FAILSAFE)
 ========================= */
 #main {
-    display: none;
     min-height: 100vh;
     padding: 80px 40px;
     text-align: center;
-    animation: mainFade 1s ease forwards;
+    animation: mainFade 0.9s ease forwards;
+}
+
+/* Hide main ONLY while intro exists */
+body:has(#intro) #main {
+    display: block;
 }
 
 /* =========================
@@ -121,6 +144,7 @@ a:focus {
 /* =========================
    HERO
 ========================= */
+.hero h1,
 .hero h2 {
     font-size: 2.8rem;
     margin-bottom: 18px;
@@ -169,7 +193,7 @@ a:focus {
 }
 
 .secondary-cta {
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid var(--border-hard);
     padding: 16px 36px;
     border-radius: 60px;
     text-decoration: none;
@@ -195,7 +219,7 @@ a:focus {
 .value-box {
     padding: 36px;
     border-radius: 22px;
-    border: 1px solid rgba(255,255,255,0.14);
+    border: 1px solid var(--border-soft);
     transition: transform 0.25s ease, background 0.25s ease;
     background: rgba(255,255,255,0.01);
 }
@@ -230,28 +254,15 @@ a:focus {
 }
 
 /* =========================
-   PREMIUM LISTINGS
+   PREMIUM
 ========================= */
 .premium {
-    border: 2px solid gold;
+    border: 2px solid var(--gold);
     background: rgba(255,215,0,0.06);
-    position: relative;
 }
 
 .premium h3 {
-    color: gold;
-}
-
-.badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: gold;
-    color: #000;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 600;
+    color: var(--gold);
 }
 
 /* =========================
@@ -259,9 +270,9 @@ a:focus {
 ========================= */
 .how-it-works {
     margin-top: 140px;
-    text-align: center;
 }
 
+.how-it-works h2,
 .how-it-works h3 {
     font-size: 1.8rem;
     margin-bottom: 55px;
@@ -276,7 +287,7 @@ a:focus {
 .how-step {
     padding: 34px;
     border-radius: 22px;
-    border: 1px solid rgba(255,255,255,0.14);
+    border: 1px solid var(--border-soft);
     background: rgba(255,255,255,0.02);
 }
 
@@ -294,67 +305,12 @@ a:focus {
 }
 
 /* =========================
-   SEARCH
-========================= */
-.search-box {
-    margin-top: 120px;
-    text-align: center;
-}
-
-.search-box input {
-    width: 100%;
-    max-width: 520px;
-    padding: 18px 26px;
-    border-radius: 60px;
-    border: 1px solid rgba(255,255,255,0.25);
-    background: transparent;
-    color: #fff;
-    font-size: 0.9rem;
-}
-
-.search-box input::placeholder {
-    color: rgba(255,255,255,0.4);
-}
-
-.search-box input:focus {
-    outline: none;
-    border-color: #fff;
-}
-
-/* =========================
-   REGISTER / CTA SECTION
-========================= */
-.register {
-    margin-top: 150px;
-    padding: 80px 30px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
-}
-
-.register h3 {
-    font-size: 1.8rem;
-    margin-bottom: 18px;
-}
-
-.register p {
-    opacity: 0.7;
-    max-width: 650px;
-    margin: 0 auto 40px;
-}
-
-.small-note {
-    font-size: 0.75rem;
-    opacity: 0.45;
-    margin-top: 18px;
-}
-
-/* =========================
    COMMUNITY
 ========================= */
 .community {
     margin-top: 140px;
     padding-top: 70px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid var(--border-soft);
 }
 
 /* =========================
@@ -375,7 +331,7 @@ a:focus {
    FOOTER
 ========================= */
 .footer {
-    background: #0a0a0a;
+    background: var(--bg-alt);
     border-top: 1px solid rgba(255,255,255,0.08);
     margin-top: 150px;
     padding: 70px 30px 25px;
@@ -389,6 +345,7 @@ a:focus {
     gap: 40px;
 }
 
+.footer h3,
 .footer h4 {
     font-size: 1.1rem;
     margin-bottom: 12px;
@@ -451,6 +408,16 @@ a:focus {
 }
 
 /* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =========================
    MOBILE
 ========================= */
 @media (max-width: 600px) {
@@ -462,6 +429,7 @@ a:focus {
         font-size: 2.2rem;
     }
 
+    .hero h1,
     .hero h2 {
         font-size: 2rem;
     }
