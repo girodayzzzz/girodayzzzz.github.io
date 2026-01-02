@@ -61,9 +61,9 @@ a:focus-visible {
 .intro-content {
     text-align: center;
     animation: introReveal 1.2s ease forwards;
-    will-change: transform, opacity;
 }
 
+.intro-content .intro-title,
 .intro-content h1 {
     font-size: 3.2rem;
     letter-spacing: 4px;
@@ -79,18 +79,13 @@ a:focus-visible {
 }
 
 /* =========================
-   MAIN CONTENT (FAILSAFE)
+   MAIN CONTENT (SAFE DEFAULT)
 ========================= */
 #main {
     min-height: 100vh;
     padding: 80px 40px;
     text-align: center;
     animation: mainFade 0.9s ease forwards;
-}
-
-/* Hide main ONLY while intro exists */
-body:has(#intro) #main {
-    display: block;
 }
 
 /* =========================
@@ -272,8 +267,7 @@ body:has(#intro) #main {
     margin-top: 140px;
 }
 
-.how-it-works h2,
-.how-it-works h3 {
+.how-it-works h2 {
     font-size: 1.8rem;
     margin-bottom: 55px;
 }
@@ -378,64 +372,4 @@ body:has(#intro) #main {
     text-decoration: none;
     font-size: 0.85rem;
     margin-bottom: 10px;
-    opacity: 0.7;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-    opacity: 1;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 0.75rem;
-    opacity: 0.4;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-@keyframes introReveal {
-    0% { opacity: 0; transform: scale(0.96); }
-    40% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.02); }
-}
-
-@keyframes mainFade {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================
-   REDUCED MOTION
-========================= */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 600px) {
-    #main {
-        padding: 60px 20px;
-    }
-
-    .intro-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero h1,
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .values,
-    .how-grid {
-        gap: 30px;
-    }
-}
+    opa
