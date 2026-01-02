@@ -18,10 +18,10 @@
 
 <body>
 
-<!-- INTRO OVERLAY (failsafe: content still visible without JS) -->
-<div id="intro" aria-hidden="true">
+<!-- INTRO OVERLAY (visual only, not semantic content) -->
+<div id="intro" aria-hidden="true" role="presentation">
     <div class="intro-content">
-        <h1>DZ Media</h1>
+        <div class="intro-title">DZ Media</div>
         <p class="intro-sub">operated by Dayzzzz S.P.</p>
     </div>
 </div>
@@ -250,7 +250,6 @@
 <!-- JS -->
 <script src="script.js"></script>
 <script>
-    // Footer year
     const yearEl = document.getElementById("year");
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
