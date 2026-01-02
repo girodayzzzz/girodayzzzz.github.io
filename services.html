@@ -11,11 +11,10 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- PAGE-SPECIFIC STYLES -->
     <style>
         #main { display: block; }
 
-        /* ---------- Reveal Animations ---------- */
+        /* Reveal Animations */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -26,8 +25,9 @@
             transform: translateY(0);
         }
 
-        /* ---------- Service Cards ---------- */
+        /* Service Cards */
         .values .value-box {
+            position: relative;
             transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
         .values .value-box:hover {
@@ -35,24 +35,33 @@
             box-shadow: 0 18px 45px rgba(0,0,0,0.08);
         }
 
-        /* ---------- Layout Sections ---------- */
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #111;
+            color: #fff;
+            opacity: 0.85;
+        }
+
         .service-cta {
             margin-top: 30px;
             display: flex;
             justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .audience,
-        .outcomes,
-        .ai-services {
+        .audience, .outcomes, .ai-services, .risk {
             max-width: 920px;
             margin: 140px auto;
             text-align: center;
         }
 
-        .audience ul,
-        .outcomes ul,
-        .ai-services ul {
+        ul.grid {
             list-style: none;
             padding: 0;
             margin-top: 35px;
@@ -61,9 +70,7 @@
             gap: 22px;
         }
 
-        .audience li,
-        .outcomes li,
-        .ai-services li {
+        ul.grid li {
             opacity: 0.85;
         }
 
@@ -83,22 +90,9 @@
             opacity: 0.5;
         }
 
-        .process-step h4 {
-            margin: 10px 0;
-        }
-
         .pricing-note {
-            margin-top: 55px;
+            margin-top: 40px;
             opacity: 0.7;
-        }
-
-        .trust {
-            margin-top: 140px;
-            max-width: 820px;
-            margin-left: auto;
-            margin-right: auto;
-            opacity: 0.7;
-            text-align: center;
         }
     </style>
 </head>
@@ -107,239 +101,152 @@
 
 <main id="main">
 
-    <!-- NAVIGATION -->
-    <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="dz-connect.html">DZ Connect</a>
-        <a href="shop.html">Shop</a>
-    </nav>
+<nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="dz-connect.html">DZ Connect</a>
+    <a href="shop.html">Shop</a>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero reveal">
-        <h2>DZ Media Services</h2>
-        <p>
-            Done-for-you digital and AI-powered services for businesses,
-            creators, and brands that want clarity, speed, and results.
-        </p>
+<section class="hero reveal">
+    <h1>DZ Media Services</h1>
+    <p>
+        Done-for-you digital and AI-powered services for businesses
+        that want faster execution and measurable outcomes.
+    </p>
+    <p class="hero-sub">Built for speed · Backed by AI · Human-reviewed</p>
 
-        <p class="hero-sub">
-            Modern execution · AI efficiency · Real outcomes
-        </p>
+    <div class="cta-group">
+        <a class="main-cta" href="#services">View Services</a>
+        <a class="secondary-cta" href="#contact">Request a Quote</a>
+    </div>
+</section>
 
-        <div class="cta-group">
-            <a class="main-cta" href="#services">View Services</a>
-            <a class="secondary-cta" href="#contact">Request a Quote</a>
-        </div>
-    </section>
+<section class="audience reveal">
+    <h3>Who This Is For</h3>
+    <p>Best suited for fast-moving teams and founders.</p>
+    <ul class="grid">
+        <li>Small businesses & startups</li>
+        <li>E-commerce & online shops</li>
+        <li>Freelancers & consultants</li>
+        <li>Creators & personal brands</li>
+    </ul>
+</section>
 
-    <!-- WHO THIS IS FOR -->
-    <section class="audience reveal">
-        <h3>Who This Is For</h3>
-        <p>
-            DZ Media is built for teams and individuals who want professional
-            execution without agency bloat or long-term lock-ins.
-        </p>
+<section class="values reveal" id="services">
+
+    <div class="value-box">
+        <span class="badge">Most Requested</span>
+        <h3>🌐 Website Development</h3>
+        <p>Conversion-focused websites & landing pages.</p>
         <ul>
-            <li>Small businesses & startups</li>
-            <li>E-commerce & online shops</li>
-            <li>Freelancers & consultants</li>
-            <li>Creators & personal brands</li>
+            <li>Business & portfolio websites</li>
+            <li>Landing pages & funnels</li>
+            <li>Website redesigns</li>
+            <li>SEO-ready structure</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- CORE SERVICES -->
-    <section class="values reveal" id="services">
-
-        <div class="value-box">
-            <h3>🌐 Website Development</h3>
-            <p>Conversion-focused websites and landing pages.</p>
-            <ul>
-                <li>Business & portfolio websites</li>
-                <li>Landing pages & funnels</li>
-                <li>Website redesigns</li>
-                <li>Performance & structure optimization</li>
-                <li>Basic SEO setup</li>
-            </ul>
-        </div>
-
-        <div class="value-box">
-            <h3>🎨 Design & Branding</h3>
-            <p>Clean, consistent visuals across platforms.</p>
-            <ul>
-                <li>Logo & brand assets</li>
-                <li>Website UI design</li>
-                <li>Social media visuals</li>
-                <li>Banners & thumbnails</li>
-            </ul>
-        </div>
-
-        <div class="value-box">
-            <h3>🎥 Video & Content</h3>
-            <p>Content optimized for attention and retention.</p>
-            <ul>
-                <li>Short-form video (Reels, Shorts, TikTok)</li>
-                <li>YouTube video editing</li>
-                <li>Hooks, captions & pacing</li>
-                <li>Content repurposing</li>
-            </ul>
-        </div>
-
-        <div class="value-box">
-            <h3>📈 Marketing Support</h3>
-            <p>Practical marketing execution and support.</p>
-            <ul>
-                <li>Social media support</li>
-                <li>Lead generation assistance</li>
-                <li>Outreach & prospecting</li>
-                <li>Basic growth strategy</li>
-            </ul>
-        </div>
-
-    </section>
-
-    <!-- AI SERVICES -->
-    <section class="ai-services reveal">
-        <h3>AI-Powered Services</h3>
-        <p>
-            We use AI as a productivity multiplier — not a replacement.
-            Faster delivery, better consistency, lower overhead.
-        </p>
-
+    <div class="value-box">
+        <h3>🎨 Design & Branding</h3>
+        <p>Consistent visuals that build trust.</p>
         <ul>
-            <li>AI-generated content & captions</li>
-            <li>AI-assisted video workflows & repurposing</li>
-            <li>AI product & shop descriptions</li>
-            <li>AI content systems for social media</li>
-            <li>Custom AI workflows for small businesses</li>
+            <li>Logo & brand assets</li>
+            <li>Website UI</li>
+            <li>Social visuals</li>
         </ul>
+    </div>
 
-        <p class="pricing-note">
-            Ideal for businesses that want speed, scalability, and efficiency
-            without sacrificing quality.
-        </p>
-
-        <div class="service-cta">
-            <a class="main-cta" href="#contact">Discuss AI Solutions</a>
-        </div>
-    </section>
-
-    <!-- OUTCOMES -->
-    <section class="outcomes reveal">
-        <h3>What You Get</h3>
+    <div class="value-box">
+        <span class="badge">High ROI</span>
+        <h3>🎥 Video & Content</h3>
+        <p>Attention-optimized content systems.</p>
         <ul>
-            <li>Clear communication and defined scope</li>
-            <li>Professional digital presence</li>
-            <li>Faster execution through AI workflows</li>
-            <li>No long-term contracts or lock-ins</li>
+            <li>Reels, Shorts, TikTok</li>
+            <li>YouTube editing</li>
+            <li>Content repurposing</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- PROCESS -->
-    <section class="process reveal">
-        <h3>How We Work</h3>
+    <div class="value-box">
+        <h3>📈 Marketing Support</h3>
+        <p>Execution-focused growth assistance.</p>
+        <ul>
+            <li>Lead generation support</li>
+            <li>Outreach assistance</li>
+            <li>Growth guidance</li>
+        </ul>
+    </div>
 
-        <div class="process-grid">
-            <div class="process-step">
-                <span>STEP 1</span>
-                <h4>Request</h4>
-                <p>You submit your goals and requirements.</p>
-            </div>
+</section>
 
-            <div class="process-step">
-                <span>STEP 2</span>
-                <h4>Proposal</h4>
-                <p>Clear scope, timeline, and pricing.</p>
-            </div>
+<section class="ai-services reveal">
+    <h3>AI-Powered Services</h3>
+    <p>AI is used to multiply output — never to reduce quality.</p>
+    <ul class="grid">
+        <li>AI-generated content & captions</li>
+        <li>AI video workflows</li>
+        <li>AI product & shop descriptions</li>
+        <li>Custom AI systems for small teams</li>
+    </ul>
 
-            <div class="process-step">
-                <span>STEP 3</span>
-                <h4>Execution</h4>
-                <p>Structured delivery with quality control.</p>
-            </div>
+    <div class="service-cta">
+        <a class="main-cta" href="#contact">Discuss AI Setup</a>
+        <a class="secondary-cta" href="#contact">Get a Free AI Sample</a>
+    </div>
+</section>
 
-            <div class="process-step">
-                <span>STEP 4</span>
-                <h4>Delivery</h4>
-                <p>Final handoff with no long-term commitment.</p>
-            </div>
-        </div>
-    </section>
+<section class="risk reveal">
+    <h3>Risk-Free Collaboration</h3>
+    <ul class="grid">
+        <li>No long-term contracts</li>
+        <li>Clear scope before work starts</li>
+        <li>Human + AI quality control</li>
+        <li>Transparent communication</li>
+    </ul>
+</section>
 
-    <!-- TRUST -->
-    <section class="trust reveal">
-        <p>
-            DZ Media combines human expertise with modern AI tools to deliver
-            efficient, scalable, and responsible digital solutions.
-        </p>
-    </section>
+<section class="process reveal">
+    <h3>How We Work</h3>
+    <div class="process-grid">
+        <div class="process-step"><span>STEP 1</span><h4>Request</h4><p>Goals & scope</p></div>
+        <div class="process-step"><span>STEP 2</span><h4>Proposal</h4><p>Plan & pricing</p></div>
+        <div class="process-step"><span>STEP 3</span><h4>Execution</h4><p>Structured delivery</p></div>
+        <div class="process-step"><span>STEP 4</span><h4>Delivery</h4><p>Clear results</p></div>
+    </div>
+</section>
 
-    <!-- CTA -->
-    <section class="register reveal" id="contact">
-        <h3>Work With DZ Media</h3>
-        <p>
-            Tell us about your project or idea.
-            We’ll review it and respond with a clear next step.
-        </p>
+<section class="register reveal" id="contact">
+    <h3>Work With DZ Media</h3>
+    <p>Tell us what you need. We’ll guide the best solution.</p>
 
-        <div class="service-cta">
-            <a class="main-cta" href="https://forms.gle/QSxuknz73TRCgKUf9" target="_blank">
-                Request a Quote
-            </a>
-        </div>
+    <div class="service-cta">
+        <a class="main-cta" href="https://forms.gle/QSxuknz73TRCgKUf9" target="_blank">Request a Quote</a>
+        <a class="secondary-cta" href="https://forms.gle/QSxuknz73TRCgKUf9" target="_blank">Quick AI Review</a>
+    </div>
 
-        <p class="small-note">
-            No obligation · Response within 24–48 hours
-        </p>
-    </section>
+    <p class="small-note">Response within 24–48 hours</p>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-inner">
-
-            <div class="footer-brand">
-                <h4>DZ Media</h4>
-                <p>Digital and AI-powered media solutions.</p>
-                <p class="footer-sub">
-                    Operated by <strong>Dayzzzz S.P.</strong>
-                </p>
-            </div>
-
-            <div class="footer-links">
-                <p class="footer-title">Platform</p>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="dz-connect.html">DZ Connect</a>
-                <a href="shop.html">Shop</a>
-            </div>
-
-            <div class="footer-contact">
-                <p class="footer-title">Contact</p>
-                <a href="mailto:info.dayzzzz@gmail.com">info.dayzzzz@gmail.com</a>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            © <span id="year"></span> DZ Media. All rights reserved.
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="footer-bottom">
+        © <span id="year"></span> DZ Media · Operated by <strong>Dayzzzz S.P.</strong>
+    </div>
+</footer>
 
 </main>
 
 <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
-    const reveals = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-            }
-        });
-    }, { threshold: 0.15 });
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("active");
+    });
+}, { threshold: 0.15 });
 
-    reveals.forEach(el => observer.observe(el));
+reveals.forEach(el => observer.observe(el));
 </script>
 
 </body>
