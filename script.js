@@ -20,19 +20,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const hasSeenIntro =
         storageAvailable && sessionStorage.getItem("introSeen") === "true";
 
+    // ---- Always ensure main content is visible ----
+    main.style.display = "block";
+    main.style.opacity = "1";
+
     // ---- Skip intro for returning visitors ----
     if (hasSeenIntro) {
         intro.style.display = "none";
         intro.setAttribute("aria-hidden", "true");
-        main.style.display = "block";
         return;
     }
 
     // ---- First visit flow ----
-    // Ensure correct initial states
     intro.style.display = "flex";
     intro.style.opacity = "1";
     intro.removeAttribute("aria-hidden");
 
-    main.style.display = "block"; // keep visible for no-JS / slow devices
-    main.
+    // Fade out intro after short delay
+    setTimeout(() => {
+        intro.style.transition = "opacity 0.5s ease";
+        intro.style.opacity = "0";
+
+        setTimeout(() => {
+            intro.style.display = "none";
+            intro.setAttribute("aria-hidden", "true");
+
+            if (storageAvailable) {
+                sessionStorage.setItem("introSeen", "true");
+            }
+        }, 500);
+    }, 1200);
+});
